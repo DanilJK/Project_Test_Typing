@@ -1,0 +1,164 @@
+:root {
+    --entered-text-background-color: #64b982;
+}
+
+.entered-text {
+    background-color: var(--entered-text-background-color);
+}
+
+.next-character {
+    border-bottom: 2px solid var(--entered-text-background-color);
+}
+
+#text {
+    align-items: center;
+    height: 75%;
+    overflow-y: auto;
+
+    white-space: pre-wrap;
+    font-size: 20px;
+    user-select: none;
+    padding: 0 15px;
+}
+
+#game-input {
+    height: 60px;
+    width: 300px;
+    position: absolute;
+    bottom: 20px;
+    align-self: flex-end;
+    font-size: 18px;
+}
+
+#room-create-btn {
+    width: 175px;
+    margin-top: 20px;
+}
+
+#root-header-container {
+    padding: 35px;
+}
+
+#rooms-page {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.room-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 275px;
+    height: 250px;
+    border: 2px solid black;
+    margin: 20px 20px 20px 35px;
+}
+
+.room-join-btn {
+    margin-bottom: 25px;
+}
+
+.room-users-count {
+    font-style: italic;
+    align-self: flex-start;
+    padding: 15px;
+}
+
+.room-name {
+    max-height: 33%;
+    max-width: 100%;
+    overflow: auto;
+    padding: 0 10px;
+}
+
+#root-container {
+    padding: 20px 0 150px 35px;
+    display: grid;
+    grid-template-columns: 30% 1fr;
+}
+
+#back-btn {
+    margin-top: 10px;
+    width: 200px;
+}
+
+#back-btn:before {
+    content: '<';
+    position: relative;
+    right: 20px;
+}
+
+.user-list-container {
+    margin-top: 40px;
+}
+
+.user-info {
+    margin-bottom: 10px;
+}
+
+.status.ready-status::before, .status.not-ready-status::before {
+    display: inline-block;
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.status.ready-status::before {
+    background-color: #a3d200;
+}
+
+.status.not-ready-status::before {
+    background-color: #ed4f65;
+}
+
+#text-container {
+    border: 2px solid black;
+    height: 100%;
+    width: 75%;
+    position: relative;
+}
+
+#readiness-btn {
+    transition: 400ms;
+    text-transform: uppercase;
+    height: 120px;
+    width: 320px;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+}
+
+.timer {
+    align-self: flex-start;
+    margin-top: 10px;
+    margin-left: 35%;
+    position: absolute;
+    font-style: italic;
+}
+
+.non-active {
+    visibility: hidden;
+}
+
+.active {
+    visibility: visible;
+}
+
+.progress-bar-container {
+    width: 250px;
+    height: 20px;
+    border: 1px solid #a3d200;
+}
+
+.progress-bar {
+    display: inline-block;
+    background-color: #a3d200;
+    height: 100%;
+}
+
+.progress-bar.complete {
+    background-color: #c0fa00;
+}

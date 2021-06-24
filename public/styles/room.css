@@ -1,0 +1,58 @@
+#root-container {
+    padding: 20px 0 150px 35px;
+    display: grid;
+    grid-template-columns: 30% 1fr;
+}
+
+#back-btn {
+    margin-top: 10px;
+    width: 200px;
+}
+
+#back-btn:before {
+    content: '<';
+    position: relative;
+    right: 20px;
+}
+
+.user-list-container {
+    margin-top: 40px;
+}
+
+.status.ready-status::before, .status.not-ready-status::before {
+    display: inline-block;
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+}
+
+.status.ready-status::before {
+    background-color: #a3d200;
+}
+
+.status.not-ready-status::before {
+    background-color: #ed4f65;
+}
+
+#text-container {
+    border: 2px solid black;
+    height: 100%;
+    width: 75%;
+}
+
+#readiness-btn {
+    transition: 400ms;
+    text-transform: uppercase;
+    height: 120px;
+    width: 320px;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+}
+
+.timer {
+    align-self: flex-start;
+    margin-top: 10px;
+    margin-left: 75%;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/game.css">
+    <link rel="stylesheet" href="../styles/room.css">
+    <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+            rel="stylesheet">
+    <script src="/socket.io/socket.io.js"></script>
+    <title>Room</title>
+</head>
+<body>
+<div class="full-screen" id="root-container">
+    <div class="left-side">
+        <h1></h1>
+        <button id="back-btn" class="btn">Back To Rooms</button>
+        <div id="user-list-container">
+            <div class="user-info">
+                <span class="status"></span>
+                <span class="user-name"></span>
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+    <div class="right-side">
+        <div id="text-container" class="flex-centered">
+            <button id="readiness-btn" class="btn">not ready</button>
+            <span class="timer">58 seconds left</span>
+            <p id="text"></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
